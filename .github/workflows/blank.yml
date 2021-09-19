@@ -1,0 +1,35 @@
+#include-Once
+;#include <Constants.au3>
+; ====================================================================================================================================
+; Title....................: plink_wrapper
+; AutoIt Version...........: 3.3.6.1
+; Language.................: English
+; Description..............: UDF Functions to Control "plink.exe" allowing intelligent response to text displayed in terminal sessions
+; Author...................: Joel Susser (susserj)
+; Last Modified............: 5/6/2011 (Phil; justhatched)
+; Status:..................: Alpha
+; Testing Workstation......; WinXP sp3, Vista Business (It likely works with other versions of Windows but I cannot confirm this right now )
+; Tested Version of Autoit.; Autoit 3.3.6.1
+
+; What is plink?
+    ;plink is a command line terminal emulation program similar to putty that allows rudimentary scripting.
+
+;Requirements
+    ; Autoit 3.3.6.X
+    ; putty.exe, plink.exe. You can acquire these programs at "http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html".
+
+; Hints
+    ; If you are using the ssh protocol I suggest you connect to your server first
+    ; with putty before you use plink for the first time so that you will not
+    ; be disrupted by the authentication certificate requests.
+
+    ; When entering your userid and password variables I suggest that you add an
+    ; additional space at the end of these strings. I'm not sure why but if you don't it will likely
+    ; cut off the last letters of your userid and password.
+
+    ; Figuring out what screen information to wait for before continuing the data input stream
+    ; can sometimes be difficult. I suggest using the putty logging feature to record the text that appears on each screen.
+    ; I believe it is advisable to do so in small chunks.
+
+    ; Also, choose strings to recognize that are unique and at the end of the putty screen capture logging sessions
+    ; for each screen. Avoid terminal escape coding.
